@@ -33,15 +33,26 @@ body{
     color: black;
 }
 nav{
-    
+
 }
 .menu-list li{
     display: flex;
+    visibility: hidden;
     background-color: black;
     list-style: none;
+    justify-content: center;
+    align-items: center;
     height: 5px;
     width: 30px;
     margin: 2px;
 
 
+}
+@media (max-width:600px) {
+    .nav-list a{
+        display: none;
+    }
+    .menu-list li{
+        visibility: visible;
+    }
 }
