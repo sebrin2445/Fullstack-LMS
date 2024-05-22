@@ -10,6 +10,9 @@ body{
 }
 .logo{
     font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+
 
 }
 .nav-list{
@@ -20,6 +23,7 @@ body{
     margin-right: 30px;
     margin-top: -20px;
     gap: 30px;
+    font-weight: 700;
 }
 .nav-list li{
     margin-left: 10px;
@@ -32,12 +36,23 @@ body{
     text-decoration: none;
     color: black;
 }
-nav{
+.nav-list button{
+width: 80px;
+height: 40px;
+margin-top: -10px;
 
+}
+.menu-main{
+    display: none;
+    justify-content: flex-end;
+    right: 5%;
+    margin-top: 20px;
+    position: fixed;
+    cursor: pointer;
 }
 .menu-list li{
     display: flex;
-    visibility: hidden;
+    visibility: visible;
     background-color: black;
     list-style: none;
     justify-content: center;
@@ -48,11 +63,39 @@ nav{
 
 
 }
-@media (max-width:600px) {
-    .nav-list a{
+.menu-main.open .menu-list li:nth-child(1){
+    transform: rotate(-45deg) translate(-4px , 4px);
+  }
+   .menu-main.open .menu-list li:nth-child(2){
+    opacity: 0;
+  }
+   .menu-main.open.open .menu-list li:nth-child(3){
+    transform: rotate(45deg) translate(-4px , -4px);
+  }
+  .menu-main.open .nav-list {
+    visibility: visible;
+    }
+    .nav-list.open{
+        display: block;
+        margin-top: 10px;
+position: fixed;
+width: 100%;
+        background-color: white;
+        
+    }
+@media (max-width:750px) {
+    .nav-list {
         display: none;
     }
-    .menu-list li{
-        visibility: visible;
+    .menu-main{
+        display: flex;
     }
-}
+    .paragraph{
+        display: flex;
+        max-width: 400px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    }
