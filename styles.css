@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    margin: 10px 20px;
+    margin: 10px;
     background-color: antiquewhite;
 
 }
@@ -17,7 +17,7 @@ body{
 }
 .nav-list{
     display: flex;
-    margin-left: 10px;
+    margin-left: -10px;
     list-style: none;
     justify-content: flex-end;
     margin-right: 30px;
@@ -81,8 +81,44 @@ margin-top: -10px;
 position: fixed;
 width: 100%;
         background-color: white;
-        
+       line-height: 1.5;
+       place-items: center;
+
+       padding: 10px;
+       
     }
+    .motto{
+        margin-top: 90px; 
+        display: flex; 
+        justify-content: center; 
+        align-items:center; 
+         padding-left: 40px; 
+         width: 300px; 
+         font-size: 3rem;
+          text-align:left; 
+          font-weight: 800; 
+         color: purple;
+     }
+     footer{
+        background-color: purple;
+        height: 80px;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 0px 20px;
+        justify-content: center;
+        overflow: auto;
+        margin-top: 110px;
+        width: 100%;
+        margin-left: -20px;
+        margin-bottom: -10px;
+     }
+     .paragraph{
+    padding-left: 40px; 
+     margin-top: 20px;
+     max-width: 500px;}
+
 @media (max-width:750px) {
     .nav-list {
         display: none;
@@ -96,6 +132,10 @@ width: 100%;
         justify-content: center;
         align-items: center;
         text-align: center;
-        
+padding-left: 10px;        
     }
+  
+   .motto{
+    padding-left: 10px;
+   }
     }
