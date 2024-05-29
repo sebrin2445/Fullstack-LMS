@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: antiquewhite;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="text,email"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: purple;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            color: black;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body> 
+</head>
+<body>
+<form action="/signup.ejs" method="POST" id="student-form">
+
+<center> <h2>Signup</h2></center>
+<label for="role">Select Role:</label>
+<select id="role" name="role" onchange="showForm()">
+    <option value="student">Student</option>
+    <option value="teacher">Teacher</option>
+</select> <br> <br>
+    <label for="Fullname">Fullname:</label>
+    <input type="text" id="Fullname" name="Fullname" required><br>
+    <label for="section">Section:</label>
+    <input type="text" id="section" name="section" required><br>
+    <label for="usernameoremail">Username or Email:</label>
+    <input type="text" id="usernameoremail" name="usernameoremail" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <input type="submit" value="Signup">
+
+    <center><h5>Already have an account? <a href="login">Login</a></h5>
+    </center></form>
+</form>
+
+<form action="/signup.ejs" method="POST" id="teacher-form" style="display:none;">
+
+<center> <h2>Signup</h2></center>
+<label for="role">Select Role:</label>
+<select id="role" name="role" onchange="showForm()">
+    <option value="student">Student</option>
+    <option value="teacher">Teacher</option>
+</select> <br> <br>
+    <label for="Fullname">Fullname:</label>
+    <input type="text" id="Fullname" name="Fullname" required><br>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required><br>
+    <label for="usernameoremail">Username or Email:</label>
+    <input type="text" id="usernameoremail" name="usernameoremail" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <input type="submit" value="Signup">
+
+    <center><h5>Already have an account? <a href="login">Login</a></h5>
+    </center></form>
+</form>
+ <script>
+        function showForm() {
+            var role = document.getElementById('role').value;
+            if (role === 'student') {
+                document.getElementById('student-form').style.display = 'block';
+                document.getElementById('teacher-form').style.display = 'none';
+            } else if (role === 'teacher') {
+                document.getElementById('student-form').style.display = 'none';
+                document.getElementById('teacher-form').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

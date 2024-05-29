@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+body{
+background-color: white;
+}
+    .profile{
+        display: grid;
+        place-items: center;
+        text-align: center;
+        min-height: 300px;
+        background: linear-gradient(to right,grey,white);
+        position: relative;
+        margin-left: 200px;
+        margin-right: 40px;
+        box-shadow: 20px 30px rgb(253, 208, 215) ;
+      
+    }
+    .profile .info{
+        margin-top: -100px;
+        text-align: left;
+        font-weight: 700;
+    }
+    .courses{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+margin:auto ;
+margin-top: 100px;
+margin-left: 200px;
+    }
+    .boxes{
+width: 200px;
+height: 200px;
+display: flex;
+font-weight: 700;
+font-size: 1.5rem;
+background-color: pink;
+justify-content: center;
+align-items: center;
+
+
+    }
+    .nav-ul li a{ 
+        text-decoration: none;
+         color: purple; 
+         display: flex;  
+         font-size: 1.2rem; 
+        margin-top: 30px;
+        font-weight: 700;
+    }
+
+.menu-main{
+    display: none;
+    justify-content: flex-end;
+    right: 5%;
+    margin-top: 20px;
+    position: fixed;
+    cursor: pointer;
+}
+.menu-list li{
+    display: flex;
+    visibility: visible;
+    background-color: black;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 5px;
+    width: 30px;
+    margin: 2px;
+
+
+}
+.menu-main.open .menu-list li:nth-child(1){
+    transform: rotate(-45deg) translate(-4px , 4px);
+  }
+   .menu-main.open .menu-list li:nth-child(2){
+    opacity: 0;
+  }
+   .menu-main.open.open .menu-list li:nth-child(3){
+    transform: rotate(45deg) translate(-4px , -4px);
+  }
+  .menu-main.open .nav-ul {
+    visibility: visible;
+    }
+    .nav-ul.open{
+        display: block;
+        margin-top: 10px;
+position: fixed;
+width: 100%;
+        background-color: white;
+       line-height: 1.5;
+       place-items: center;
+
+       padding: 10px;
+       
+    }
+</style>
+<body>
+    <div class="menu-main" onclick="toggleSidebar()">
+        <ul class="menu-list">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <aside style="background-color: antiquewhite; height: 100vh; width: 200px; position: fixed; margin:-10px; display: columns;">
+<h3 style="display: flex; justify-content: center; margin-top: 50px;">Student Dashboard</h3>
+  <ul style="list-style: none;" class="nav-ul">
+    <li>   <a href="" >Profile</a> </li>
+    <li>   <a href="" >Courses</a> </li> <br><br><br>
+    <li>   <a href="" >Logout</a> </li>
+
+    
+  </ul>
+
+</aside>
+<div class="profile" >
+    <h2>Welcome <%= stuname %></h2>
+    <div class="info" style="">
+        Name:sebrina semir <br>
+        section:9A <br>
+
+    </div>
+</div>
+<div class="courses">
+    <div class="boxes">English</div>
+    <div class="boxes">Maths</div>
+    <div class="boxes">Biology</div>
+    <div class="boxes">History</div>
+    <div class="boxes">Chemistry</div>
+    <div class="boxes">Physics</div>
+    <div class="boxes">Amharic</div>
+    <div class="boxes">Geography</div>
+    <div class="boxes">Civic</div>
+</div>
+<script>
+    function toggleSidebar(){
+    var sidebar=document.querySelector('.menu-main');
+    const menuItems = document.querySelector('.nav-list');
+
+    sidebar.classList.toggle('open');
+    menuItems.classList.toggle('open');
+
+    
+    
+    
+  }
+</script>
+</body>
+</html>
